@@ -1,6 +1,7 @@
 import * as dotenv from 'dotenv'
 import path from 'path'
 import { fileURLToPath } from 'url'
+import type { Request, Response } from 'express'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 dotenv.config({ path: path.resolve(__dirname, '../.env.local') })
@@ -22,7 +23,7 @@ const start = async () => {
 
   app.use(express.json())
 
-  app.all('*', (req, res) => handle(req, res))
+  app.all('*', (req: Request, res: Response) => handle(req, res))
 
   const port = process.env.PORT || 3000
   app.listen(port, () => {
