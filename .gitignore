@@ -46,3 +46,4 @@ ehthumbs.db
 # Payload
 .payload*
 node_modules
+.vercel
