@@ -33,12 +33,12 @@ export const Posts: CollectionConfig = {
       name: 'featuredImage',
       type: 'upload',
       relationTo: 'media',
-      required: true,
+      required: false,
     },
     {
       name: 'imageAlt',
       type: 'text',
-      required: true,
+      required: false,
     },
     {
       name: 'category',
